@@ -1,1 +1,3 @@
-Discord.Net==2.11
+Discord==2.11
+Discord.Core==2.11
+Discord.WebSocket==2.11
