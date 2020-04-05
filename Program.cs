@@ -3,6 +3,7 @@ using Discord.WebSocket;
 using System.Collections.Generic;
 using System;
 using System.Threading.Tasks;
+using os;
 
 namespace ConsoleApp2
 {
@@ -12,6 +13,8 @@ namespace ConsoleApp2
         List<string> UserID = new List<string>();
         List<bool> isDc = new List<bool>();
         private readonly DiscordSocketClient _client;
+        access_token = as.enviorn["BOT_TOKEN"];
+        
         static void Main(string[] args)
         {
             new Program().MainAsync().GetAwaiter().GetResult();
@@ -28,7 +31,7 @@ namespace ConsoleApp2
 
         public async Task MainAsync()
         {
-            await _client.LoginAsync(TokenType.Bot, "Njk1OTEwOTEyMzM4NjkwMDc4.XohhLA.MEmeSvLbuCThvmahh9UGCJxpxcU");
+            await _client.LoginAsync(TokenType.Bot, access_token);
             await _client.StartAsync();
 
             await Task.Delay(-1);
